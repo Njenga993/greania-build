@@ -1,0 +1,144 @@
+.services-page {
+  background-color: #f8f9fa;
+  padding-bottom: 4rem;
+}
+
+.services-hero {
+  background: linear-gradient(135deg, #004d40, #00695c);
+  padding: 5rem 1.5rem;
+  text-align: center;
+  color: white;
+}
+
+.sercivehero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sercivehero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.sercivehero-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.services-list {
+  padding: 4rem 1.5rem;
+}
+
+.services-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #004d40;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover::before {
+  height: 10px;
+  background-color: #ffc107;
+}
+
+.service-icon {
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1);
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  color: #002f34;
+  margin-bottom: 1rem;
+}
+
+.service-card p {
+  color: #5a6a72;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.service-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.service-highlights li {
+  background-color: #e8f5e9;
+  color: #004d40;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .services-list {
+    padding: 3rem 1rem;
+  }
+
+  .service-card {
+    padding: 1.5rem;
+  }
+}
+.service-icon img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+.service-icon svg {
+  width: 50px;
+  height: 50px;
+  fill: currentColor;
+}
+.service-icon svg path {
+  transition: fill 0.3s ease;
+}
+.service-icon:hover path {
+  fill: #ffc107;
+}
+

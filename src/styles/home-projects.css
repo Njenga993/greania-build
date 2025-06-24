@@ -219,6 +219,11 @@
   z-index: 0;
 }
 
+.testimonial-break {
+  margin-top: 4rem;
+  background-color: #f8f9fa;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .home-projects {

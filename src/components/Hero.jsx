@@ -59,7 +59,7 @@ function Hero() {
             transitionTime={800}
           >
             <div className="carousel-slide">
-              <img src="/roadwork-ahead-with-reflections-4799875.jpg" alt="Roadwork construction" loading="lazy" />
+              <img src="/image001.jpeg" alt="Roadwork construction" loading="lazy" />
               <div className="carousel-caption">
                 <h3>Precision Road Construction</h3>
                 <p>Connecting communities with durable and safe roads, built to last generations.</p>
