@@ -92,7 +92,7 @@ function Navbar() {
         <div className="mobile-menu-container">
           <div className="mobile-menu-header">
             <img 
-              src="/cropped-greanialogo3-1.png" 
+              src="/greania-build/cropped-greanialogo3-1.png" 
               alt="Greania Build" 
               className="mobile-logo"
             />
