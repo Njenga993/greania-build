@@ -41,8 +41,8 @@ function App() {
       ) : (
         <>
           <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
+          <Routes basename ="/greania-build/">
+            <Route path="/greania-build/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/projects" element={<ProjectsPage />} />

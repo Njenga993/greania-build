@@ -70,7 +70,7 @@ function AboutSection() {
         
         <div className="about-image">
           <img 
-            src="/image001.jpeg" 
+            src="/greania-build/image001.jpeg" 
             alt="Greania Build Solutions Team" 
             loading="lazy"
           />
@@ -79,7 +79,7 @@ function AboutSection() {
             <small>Years Experience</small>
           </div>
          <img 
-            src="/image002.jpeg" 
+            src="/greania-build/image002.jpeg" 
             alt="Greania Build Solutions Team" 
             loading="lazy"
           />

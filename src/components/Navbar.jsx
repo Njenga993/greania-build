@@ -50,7 +50,7 @@ function Navbar() {
           <div className="navbar-left">
             <Link to="/" className="logo-link">
               <img 
-                src="/cropped-greanialogo3-1.png" 
+                src="/greania-build/cropped-greanialogo3-1.png" 
                 alt="Greania Build" 
                 className="logo-img"
               />
@@ -58,7 +58,7 @@ function Navbar() {
           </div>
 
           <ul className="navbar-center">
-            <li><NavLink to="/" onClick={closeMenu}>Home</NavLink></li>
+            <li><NavLink to="/greania-build/" onClick={closeMenu}>Home</NavLink></li>
             <li><NavLink to="/about" onClick={closeMenu}>About</NavLink></li>
             <li><NavLink to="/services" onClick={closeMenu}>Services</NavLink></li>
             <li><NavLink to="/projects" onClick={closeMenu}>Projects</NavLink></li>
@@ -106,7 +106,7 @@ function Navbar() {
           </div>
 
           <ul className="mobile-nav-links">
-            <li><NavLink to="/" onClick={closeMenu}>Home</NavLink></li>
+            <li><NavLink to="/greania-build/" onClick={closeMenu}>Home</NavLink></li>
             <li><NavLink to="/about" onClick={closeMenu}>About</NavLink></li>
             <li><NavLink to="/services" onClick={closeMenu}>Services</NavLink></li>
             <li><NavLink to="/projects" onClick={closeMenu}>Projects</NavLink></li>

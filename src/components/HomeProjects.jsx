@@ -12,7 +12,7 @@ function HomeProjects() {
       id: 1,
       title: "Nakuru Business Hub",
       category: "Commercial",
-      image: "/roadwork-ahead-with-reflections-4799875.jpg",
+      image: "/greania-build/roadwork-ahead-with-reflections-4799875.jpg",
       description: "A modern 8-story commercial complex with retail spaces, offices, and conference facilities in Nakuru CBD.",
       features: ["LEED Certified", "15,000 sqm", "6-month timeline"],
       icon: <FaBuilding />
@@ -21,7 +21,7 @@ function HomeProjects() {
       id: 2,
       title: "Lakeview Luxury Villas",
       category: "Residential",
-      image: "/roadwork-ahead-with-reflections-4799875.jpg",
+      image: "/greania-build/roadwork-ahead-with-reflections-4799875.jpg",
       description: "Exclusive gated community with 12 luxury villas featuring smart home technology and sustainable design.",
       features: ["Solar powered", "3-5 bedrooms", "Landscaped gardens"],
       icon: <FaHardHat />
@@ -30,7 +30,7 @@ function HomeProjects() {
       id: 3,
       title: "Gilgil-Nakuru Highway",
       category: "Infrastructure",
-      image: "/image002.jpeg",
+      image: "/greania-build/image002.jpeg",
       description: "20km dual carriageway highway project with drainage systems and modern safety features.",
       features: ["Grade A asphalt", "LED lighting", "6 bridges"],
       icon: <FaRoad />
@@ -39,7 +39,7 @@ function HomeProjects() {
       id: 4,
       title: "Heritage Office Renovation",
       category: "Renovation",
-      image: "/image001.jpeg",
+      image: "/greania-build/image001.jpeg",
       description: "Restoration and modernization of a historic building into contemporary office spaces while preserving original features.",
       features: ["Structural reinforcement", "Vintage preservation", "Modern interiors"],
       icon: <FaHardHat />

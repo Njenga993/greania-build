@@ -44,7 +44,7 @@ function Footer() {
           {/* Company Info */}
           <div className="footer-company">
             <div className="footer-logo">
-              <img src="/cropped-greanialogo3-1.png" alt="Greania Build" />
+              <img src="/greania-build/cropped-greanialogo3-1.png" alt="Greania Build" />
             </div>
             <p className="footer-mission">
               Building the future with integrity and excellence. We transform visions into strong foundations.
@@ -78,7 +78,7 @@ function Footer() {
             </div>
             <div className={`footer-section-content ${expandedSections.links ? 'expanded' : ''}`}>
               <ul>
-                <li><Link to="/">Home</Link></li>
+                <li><Link to="//greania-build/">Home</Link></li>
                 <li><Link to="/about">About Us</Link></li>
                 <li><Link to="/services">Services</Link></li>
                 <li><Link to="/projects">Projects</Link></li>
