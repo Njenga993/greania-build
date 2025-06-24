@@ -78,7 +78,7 @@ function Footer() {
             </div>
             <div className={`footer-section-content ${expandedSections.links ? 'expanded' : ''}`}>
               <ul>
-                <li><Link to="//greania-build/">Home</Link></li>
+                <li><Link to="/greania-build/">Home</Link></li>
                 <li><Link to="/about">About Us</Link></li>
                 <li><Link to="/services">Services</Link></li>
                 <li><Link to="/projects">Projects</Link></li>
