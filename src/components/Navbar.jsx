@@ -38,7 +38,7 @@ function Navbar() {
               <FaPhone /> +123 456 7890
             </a>
             <a href="mailto:info@greaniabuild.com" className="contact-link">
-              <MdEmail /> info@greaniabuild.com
+              <MdEmail /> info@greaniabuilding.com
             </a>
           </div>
         </div>
