@@ -27,8 +27,8 @@ function HomeContact() {
               </div>
               <div className="info-content">
                 <h3>Phone</h3>
-                <p>+254 123 456 789</p>
-                <p>+254 987 654 321</p>
+                <p>+254 791 554 319</p>
+                <p>+254 757 657 217</p>
               </div>
             </div>
 

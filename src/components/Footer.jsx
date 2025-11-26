@@ -52,7 +52,7 @@ function Footer() {
             <div className="footer-contact">
               <div className="contact-item">
                 <FaPhone className="contact-icon" />
-                <span>+254 123 456 789</span>
+                <span>+254 791 554 319</span>
               </div>
               <div className="contact-item">
                 <FaEnvelope className="contact-icon" />
@@ -159,7 +159,7 @@ function Footer() {
             &copy; {new Date().getFullYear()} Greania Build Solutions. All rights reserved.
           </p>
           <p className="credits">
-            Designed with ❤️ by <Link to="https://njenga993.github.io/kspace/">KAMAU  </Link>
+            Designed & Developed by <Link to="https://njenga993.github.io/kspace/">K-space  </Link>
           </p>
         </div>
       </div>

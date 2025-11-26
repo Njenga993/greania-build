@@ -8,6 +8,7 @@ import Services from './pages/Services';
 import ProjectsPage from './pages/ProjectsPage';
 import ContactPage from './pages/ContactPage';
 import ConstructionLoader from './components/ConstructionLoader';
+import ScrollToTopButton from './components/ScrollToTopButton';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 // ... import other pages
 
@@ -49,6 +50,7 @@ function App() {
             <Route path="/contact" element={<ContactPage />} />
             {/* Other routes */}
           </Routes>
+          <ScrollToTopButton />
           <Footer />
         </>
       )}

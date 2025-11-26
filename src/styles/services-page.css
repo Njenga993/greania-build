@@ -1,3 +1,4 @@
+/* src/styles/services-page.css */
 .services-page {
   background-color: #f8f9fa;
   padding-bottom: 4rem;
@@ -44,6 +45,8 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .service-card::before {
@@ -87,6 +90,7 @@
   line-height: 1.6;
   margin-bottom: 1.5rem;
   font-size: 0.95rem;
+  flex-grow: 1;
 }
 
 .service-highlights {
@@ -109,11 +113,11 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .hero-content h1 {
+  .sercivehero-content h1 {
     font-size: 2rem;
   }
 
-  .hero-content p {
+  .sercivehero-content p {
     font-size: 1rem;
   }
 
@@ -125,20 +129,23 @@
     padding: 1.5rem;
   }
 }
+
 .service-icon img {
   width: 50px;
   height: 50px;
   object-fit: contain;
 }
+
 .service-icon svg {
   width: 50px;
   height: 50px;
   fill: currentColor;
 }
+
 .service-icon svg path {
   transition: fill 0.3s ease;
 }
+
 .service-icon:hover path {
   fill: #ffc107;
 }
-

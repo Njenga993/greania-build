@@ -34,8 +34,8 @@ function Navbar() {
             <Link to="/contact" className="announcement-link">Contact Us Today!</Link>
           </span>
           <div className="announcement-contacts">
-            <a href="tel:+1234567890" className="contact-link">
-              <FaPhone /> +123 456 7890
+            <a href="tel:+254791554319" className="contact-link">
+              <FaPhone /> +254 791 554 319
             </a>
             <a href="mailto:info@greaniabuild.com" className="contact-link">
               <MdEmail /> info@greaniabuilding.com

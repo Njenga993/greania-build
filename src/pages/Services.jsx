@@ -1,44 +1,73 @@
 import React from 'react';
 import '../styles/services-page.css';
-import { FaBuilding, FaHome, FaRoad, FaHammer, FaHardHat, FaTools } from 'react-icons/fa';
+import { 
+  FaHome, 
+  FaSeedling, 
+  FaTree, 
+  FaChurch, 
+  FaBolt, 
+  FaWater, 
+  FaWarehouse, 
+  FaHammer,
+  FaTools,
+  FaHandshake
+} from 'react-icons/fa';
 
 function Services() {
   const services = [
     {
-      icon: <FaBuilding size={40} />,
-      title: "Commercial Construction",
-      description: "From office complexes to retail spaces, we deliver high-quality commercial buildings on time and within budget.",
-      highlights: ["Design-build", "Project management", "LEED certification"]
-    },
-    {
       icon: <FaHome size={40} />,
-      title: "Residential Projects",
-      description: "Beautiful, functional homes built with precision and care using quality materials and craftsmanship.",
-      highlights: ["Custom homes", "Renovations", "Smart home integration"]
+      title: "Mud House Construction",
+      description: "Sustainable and affordable housing solutions using locally sourced materials and traditional building techniques.",
+      highlights: ["Eco-friendly materials", "Thermal efficiency", "Cultural preservation"]
     },
     {
-      icon: <FaRoad size={40} />,
-      title: "Infrastructure Development",
-      description: "Roads, bridges, and utilities that connect communities and support economic growth.",
-      highlights: ["Asphalt paving", "Drainage systems", "Site preparation"]
+      icon: <FaSeedling size={40} />,
+      title: "Seedbank Development",
+      description: "Specialized construction of climate-controlled storage facilities to preserve indigenous seeds and support food security.",
+      highlights: ["Climate control systems", "Pest management", "Training facilities"]
+    },
+    {
+      icon: <FaTree size={40} />,
+      title: "Natural Building",
+      description: "Construction using sustainable materials like bamboo, earth, and locally sourced timber for community spaces.",
+      highlights: ["Bamboo construction", "Earth building", "Natural ventilation"]
+    },
+    {
+      icon: <FaChurch size={40} />,
+      title: "Sacred Space Renovation",
+      description: "Respectful renovation and interior design for places of worship, creating welcoming spaces for communities.",
+      highlights: ["Acoustic optimization", "Accessibility features", "Cultural sensitivity"]
+    },
+    {
+      icon: <FaBolt size={40} />,
+      title: "Rural Electrification",
+      description: "Installation of electrical systems in remote areas, connecting homes and facilities to reliable power sources.",
+      highlights: ["Solar installations", "Grid connections", "Community training"]
+    },
+    {
+      icon: <FaWater size={40} />,
+      title: "Water Harvesting Systems",
+      description: "Design and installation of rainwater collection and storage systems for communities facing water scarcity.",
+      highlights: ["Rainwater collection", "Filtration systems", "Storage solutions"]
+    },
+    {
+      icon: <FaWarehouse size={40} />,
+      title: "Community Storage",
+      description: "Construction of storage facilities for agricultural produce to reduce post-harvest losses and support local economies.",
+      highlights: ["Climate control", "Loading bays", "Security features"]
     },
     {
       icon: <FaHammer size={40} />,
-      title: "Renovation Services",
-      description: "Transforming existing spaces with innovative solutions that enhance functionality and aesthetics.",
-      highlights: ["Interior remodeling", "Structural upgrades", "Historic preservation"]
-    },
-    {
-      icon: <FaHardHat size={40} />,
-      title: "Project Management",
-      description: "Comprehensive oversight from conception to completion ensuring quality and efficiency.",
-      highlights: ["Cost control", "Scheduling", "Quality assurance"]
+      title: "Small-Scale Infrastructure",
+      description: "Essential community infrastructure like bridges, pathways, and public spaces that connect and serve local populations.",
+      highlights: ["Footbridges", "Community centers", "Public spaces"]
     },
     {
       icon: <FaTools size={40} />,
-      title: "Consultation Services",
-      description: "Expert advice to help you make informed decisions about your construction projects.",
-      highlights: ["Feasibility studies", "Design consultation", "Budget planning"]
+      title: "Skills Training",
+      description: "Hands-on construction training programs that empower community members with practical building skills.",
+      highlights: ["Apprenticeship programs", "Tool provision", "Certification"]
     }
   ];
 
@@ -46,9 +75,9 @@ function Services() {
     <main className="services-page">
       <section className="services-hero">
         <div className="sercivehero-content">
-          <h1>Our Services</h1>
+          <h1>Our Community Services</h1>
           <p>
-            Greania Build Solutions offers a broad spectrum of construction services tailored to meet your residential, commercial, and infrastructure needs. Discover how we can bring your vision to life.
+            Greania Build Solutions offers a comprehensive range of community-focused construction services that preserve cultural heritage while embracing sustainable practices. Discover how we can strengthen your community together.
           </p>
         </div>
       </section>

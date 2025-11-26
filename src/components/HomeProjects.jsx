@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/home-projects.css';
-import { FaExpand, FaHardHat, FaBuilding, FaRoad } from 'react-icons/fa';
+import { FaExpand, FaHardHat, FaBuilding, FaRoad, FaHome, FaSeedling, FaTree, FaChurch, FaBolt, FaWarehouse, FaWater } from 'react-icons/fa';
 
 function HomeProjects() {
   const [expandedProject, setExpandedProject] = useState(null);
@@ -10,39 +10,75 @@ function HomeProjects() {
   const projects = [
     {
       id: 1,
-      title: "Nakuru Business Hub",
-      category: "Commercial",
-      image: "/greania-build/roadwork-ahead-with-reflections-4799875.jpg",
-      description: "A modern 8-story commercial complex with retail spaces, offices, and conference facilities in Nakuru CBD.",
-      features: ["LEED Certified", "15,000 sqm", "6-month timeline"],
-      icon: <FaBuilding />
+      title: "Turkana Mud Houses Initiative",
+      category: "Community",
+      image: "./roadwork-ahead-with-reflections-4799875.jpg",
+      description: "Construction of 10 sustainable mud houses for local families in Turkana County, using locally sourced materials and traditional building techniques.",
+      features: ["Eco-friendly materials", "10 family homes", "Water harvesting systems"],
+      icon: <FaHome />
     },
     {
       id: 2,
-      title: "Lakeview Luxury Villas",
-      category: "Residential",
-      image: "/greania-build/roadwork-ahead-with-reflections-4799875.jpg",
-      description: "Exclusive gated community with 12 luxury villas featuring smart home technology and sustainable design.",
-      features: ["Solar powered", "3-5 bedrooms", "Landscaped gardens"],
-      icon: <FaHardHat />
+      title: "Turkana Seedbank Project",
+      category: "Agricultural",
+      image: "./roadwork-ahead-with-reflections-4799875.jpg",
+      description: "Establishment of a community seedbank to preserve indigenous seeds and support food security in Turkana County.",
+      features: ["Climate-controlled storage", "Training facility", "Local seed varieties"],
+      icon: <FaSeedling />
     },
     {
       id: 3,
-      title: "Gilgil-Nakuru Highway",
-      category: "Infrastructure",
-      image: "/greania-build/image002.jpeg",
-      description: "20km dual carriageway highway project with drainage systems and modern safety features.",
-      features: ["Grade A asphalt", "LED lighting", "6 bridges"],
-      icon: <FaRoad />
+      title: "Makueni Natural Structures",
+      category: "Eco-Construction",
+      image: "./roadwork-ahead-with-reflections-4799875.jpg",
+      description: "Building of community spaces using natural materials and sustainable techniques in Makueni County.",
+      features: ["Bamboo construction", "Natural ventilation", "Rainwater collection"],
+      icon: <FaTree />
     },
     {
       id: 4,
-      title: "Heritage Office Renovation",
-      category: "Renovation",
-      image: "/greania-build/image001.jpeg",
-      description: "Restoration and modernization of a historic building into contemporary office spaces while preserving original features.",
-      features: ["Structural reinforcement", "Vintage preservation", "Modern interiors"],
-      icon: <FaHardHat />
+      title: "Embu Eco-Center",
+      category: "Community",
+      image: "./roadwork-ahead-with-reflections-4799875.jpg",
+      description: "Development of a community center in Embu using natural building methods and renewable energy.",
+      features: ["Solar power", "Natural materials", "Community workshops"],
+      icon: <FaBuilding />
+    },
+    {
+      id: 5,
+      title: "Local Church Interior Design",
+      category: "Interior",
+      image: "./roadwork-ahead-with-reflections-4799875.jpg",
+      description: "Interior renovation and design of a local church, creating a welcoming space for worship and community gatherings.",
+      features: ["Custom woodwork", "Improved acoustics", "Accessible design"],
+      icon: <FaChurch />
+    },
+    {
+      id: 6,
+      title: "Rural Electrification Project",
+      category: "Infrastructure",
+      image: "./roadwork-ahead-with-reflections-4799875.jpg",
+      description: "Installation of electricity systems in rural communities, connecting homes and facilities to reliable power sources.",
+      features: ["Solar installations", "Wiring for 50 homes", "Community training"],
+      icon: <FaBolt />
+    },
+    {
+      id: 7,
+      title: "Community Storage Facility",
+      category: "Agricultural",
+      image: "./roadwork-ahead-with-reflections-4799875.jpg",
+      description: "Construction of a modern storage facility for agricultural produce to reduce post-harvest losses.",
+      features: ["Climate control", "Pest management", "Loading bays"],
+      icon: <FaWarehouse />
+    },
+    {
+      id: 8,
+      title: "Water Harvesting Systems",
+      category: "Infrastructure",
+      image: "./roadwork-ahead-with-reflections-4799875.jpg",
+      description: "Installation of water harvesting and storage systems for communities facing water scarcity.",
+      features: ["Rainwater collection", "Filtration systems", "Storage tanks"],
+      icon: <FaWater />
     }
   ];
 
@@ -57,7 +93,7 @@ function HomeProjects() {
         <h2 className="section-title">Recent Projects That Define Our Excellence</h2>
         <div className="divider"></div>
         <p className="section-description">
-          Each project reflects our commitment to quality, innovation, and client satisfaction.
+          From large commercial developments to community-focused initiatives, each project reflects our commitment to quality, sustainability, and client satisfaction.
         </p>
       </div>
 

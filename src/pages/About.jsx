@@ -28,7 +28,7 @@ function About() {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/*
       <section className="our-team">
         <div className="container">
           <h2>Meet Our Leadership Team</h2>
@@ -53,32 +53,52 @@ function About() {
             </div>
           </div>
         </div>
-      </section>
+      </section>*/}
 
       {/* Timeline / Milestones */}
       <section className="milestones">
-        <div className="container">
-          <h2>Our Journey</h2>
-          <ul className="timeline">
-            <li>
-              <span className="year">2020</span>
-              <p>Greania Build Solutions was founded and completed its first residential project.</p>
-            </li>
-            <li>
-              <span className="year">2021</span>
-              <p>Expanded into commercial construction and secured 10+ new contracts.</p>
-            </li>
-            <li>
-              <span className="year">2022</span>
-              <p>Introduced civil engineering division and roadworks expertise.</p>
-            </li>
-            <li>
-              <span className="year">2023</span>
-              <p>Opened a second regional office and hit 100+ completed projects.</p>
-            </li>
-          </ul>
-        </div>
-      </section>
+  <div className="container">
+    <h2>Our Journey</h2>
+    <ul className="timeline">
+      <li>
+        <span className="year">2020</span>
+        <p>Greania Build Solutions was founded as a specialized construction company, completing our first commercial residential project in Nairobi and establishing our reputation for quality craftsmanship.</p>
+      </li>
+      <li>
+        <span className="year">2021</span>
+        <p>Secured our first major contract with an international NGO to construct sustainable housing units, demonstrating our expertise in eco-friendly building techniques and traditional construction methods.</p>
+      </li>
+      <li>
+        <span className="year">2022</span>
+        <p>Expanded into commercial construction while securing 15+ new contracts, and established our Natural Building Division after winning a competitive bid for specialized community infrastructure projects.</p>
+      </li>
+      <li>
+        <span className="year">2023</span>
+        <p>Completed a landmark contract for the construction of 10 mud houses as part of a government housing initiative, and successfully delivered our first seedbank facility for an agricultural development organization.</p>
+      </li>
+      <li>
+        <span className="year">2023</span>
+        <p>Launched our Sacred Spaces Renovation services after securing contracts with 5 religious institutions for interior design and structural enhancement projects.</p>
+      </li>
+      <li>
+        <span className="year">2024</span>
+        <p>Introduced civil engineering division and roadworks expertise while completing contracted rural electrification projects for 8 communities through government and private sector partnerships.</p>
+      </li>
+      <li>
+        <span className="year">2024</span>
+        <p>Established fee-based construction training programs, certifying 50+ professionals in sustainable construction techniques and creating an additional revenue stream for the company.</p>
+      </li>
+      <li>
+        <span className="year">2025</span>
+        <p>completed 50+ contracted projects, including water harvesting systems and natural structures built for various development organizations and private clients.</p>
+      </li>
+      <li>
+        <span className="year">2025</span>
+        <p>Delivered our largest seedbank construction contract to date, serving 3 counties for a consortium of agricultural organizations, while expanding our Eco-Friendly Materials division to meet growing market demand.</p>
+      </li>
+    </ul>
+  </div>
+</section>
     </main>
   );
 }

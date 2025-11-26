@@ -12,7 +12,7 @@ function Hero() {
           <div className="tagline">Building Excellence Since 2020</div>
           <h1>Building Strong Foundations for a Better Tomorrow</h1>
           <p className="hero-description">
-            At Greania Build Solutions, we turn architectural dreams into concrete realities — with expertise, integrity, and innovation. 
+            At Greania Build Solutions, we turn architectural dreams into concrete realities  with expertise, integrity, and innovation. 
             Our award-winning team delivers exceptional construction services across residential, commercial, and infrastructure projects.
           </p>
           
