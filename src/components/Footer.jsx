@@ -56,7 +56,8 @@ function Footer() {
               </div>
               <div className="contact-item">
                 <FaEnvelope className="contact-icon" />
-                <span>info@greaniabuild.com</span>
+                <span>info@greaniabuild.co.ke
+                </span>
               </div>
               <div className="contact-item">
                 <FaMapMarkerAlt className="contact-icon" />

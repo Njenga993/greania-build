@@ -4,6 +4,11 @@ import { Carousel } from 'react-responsive-carousel';
 import '../styles/hero.css';
 import { Link } from 'react-router-dom';
 
+// ✅ Import images locally (RELIABLE)
+import image001 from '/image001.jpeg';
+import image002 from '/together.jpeg';
+import image003 from '/kakuma.jpeg';
+
 function Hero() {
   return (
     <section className="hero-section">
@@ -12,10 +17,10 @@ function Hero() {
           <div className="tagline">Building Excellence Since 2020</div>
           <h1>Building Strong Foundations for a Better Tomorrow</h1>
           <p className="hero-description">
-            At Greania Build Solutions, we turn architectural dreams into concrete realities  with expertise, integrity, and innovation. 
+            At Greania Build Solutions, we turn architectural dreams into concrete realities with expertise, integrity, and innovation.
             Our award-winning team delivers exceptional construction services across residential, commercial, and infrastructure projects.
           </p>
-          
+
           <div className="hero-stats">
             <div className="stat-item">
               <span className="stat-number">50+</span>
@@ -59,23 +64,25 @@ function Hero() {
             transitionTime={800}
           >
             <div className="carousel-slide">
-              <img src="/greania-build/image001.jpeg" alt="Roadwork construction" loading="lazy" />
+              <img src={image001} alt="Roadwork construction" loading="lazy" />
               <div className="carousel-caption">
                 <h3>Precision Road Construction</h3>
                 <p>Connecting communities with durable and safe roads, built to last generations.</p>
                 <Link to="/services/road-construction" className="caption-link">Learn More →</Link>
               </div>
             </div>
+
             <div className="carousel-slide">
-              <img src="/greania-build/image001.jpeg" alt="Modern commercial building" loading="lazy" />
+              <img src={image003} alt="Modern commercial building" loading="lazy" />
               <div className="carousel-caption">
                 <h3>Modern Commercial Excellence</h3>
                 <p>From blueprints to handover — we deliver business-ready spaces with style and structure.</p>
                 <Link to="/services/commercial" className="caption-link">Learn More →</Link>
               </div>
             </div>
+
             <div className="carousel-slide">
-              <img src="/greania-build/image002.jpeg" alt="Construction team at work" loading="lazy" />
+              <img src={image002} alt="Construction team at work" loading="lazy" />
               <div className="carousel-caption">
                 <h3>Teamwork That Builds Nations</h3>
                 <p>Our dedicated engineers and workers bring your vision to life with precision and care.</p>

@@ -3,6 +3,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/about-section.css';
 
+// ✅ Import images locally (reliable everywhere)
+import image001 from '/image001.jpeg';
+import image002 from '/western.jpeg';
+
 function AboutSection() {
   return (
     <section className="about-section">
@@ -69,21 +73,26 @@ function AboutSection() {
         </div>
         
         <div className="about-image">
+
+          {/* First image */}
           <img 
-            src="/greania-build/image001.jpeg" 
-            alt="Greania Build Solutions Team" 
-            loading="lazy"
-          />
-         <div className="experience-badge">
-            <span>5+</span>
-            <small>Years Experience</small>
-          </div>
-         <img 
-            src="/greania-build/image002.jpeg" 
-            alt="Greania Build Solutions Team" 
+            src={image001}
+            alt="Greania Build Solutions Team"
             loading="lazy"
           />
 
+          <div className="experience-badge">
+            <span>5+</span>
+            <small>Years Experience</small>
+          </div>
+
+          {/* Second image */}
+          <img 
+            src={image002}
+            alt="Greania Build Solutions Team Working"
+            loading="lazy"
+          />
+          
         </div>
       </div>
     </section>

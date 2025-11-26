@@ -2,7 +2,16 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/home-projects.css';
-import { FaExpand, FaHardHat, FaBuilding, FaRoad, FaHome, FaSeedling, FaTree, FaChurch, FaBolt, FaWarehouse, FaWater } from 'react-icons/fa';
+import Hope from "/roadwork-ahead-with-reflections-4799875.jpg"
+import Water from "/efficient-water-pump-in-action-356516.jpg"
+import Tank from "/stacked-shipping-containers-in-a-freight-yard-332307.jpg"
+import Solar from "/eco-friendly-solar-panels-in-sunlit-landscape-321030.jpg"
+import Church from "/church.jpeg"
+import turkana from "/turkana.jpeg"
+import kakuma from "/kakuma.jpeg"
+import Makueni from "/makueni.jpeg"
+import Western from "/western.jpeg"
+import { FaExpand, FaBuilding,  FaHome, FaSeedling, FaTree, FaChurch, FaBolt, FaWarehouse, FaWater } from 'react-icons/fa';
 
 function HomeProjects() {
   const [expandedProject, setExpandedProject] = useState(null);
@@ -10,36 +19,36 @@ function HomeProjects() {
   const projects = [
     {
       id: 1,
-      title: "Turkana Mud Houses Initiative",
+      title: " Mud Houses Initiative",
       category: "Community",
-      image: "./roadwork-ahead-with-reflections-4799875.jpg",
+      image: turkana,
       description: "Construction of 10 sustainable mud houses for local families in Turkana County, using locally sourced materials and traditional building techniques.",
       features: ["Eco-friendly materials", "10 family homes", "Water harvesting systems"],
       icon: <FaHome />
     },
     {
       id: 2,
-      title: "Turkana Seedbank Project",
+      title: " Seedbank Project",
       category: "Agricultural",
-      image: "./roadwork-ahead-with-reflections-4799875.jpg",
+      image: kakuma,
       description: "Establishment of a community seedbank to preserve indigenous seeds and support food security in Turkana County.",
       features: ["Climate-controlled storage", "Training facility", "Local seed varieties"],
       icon: <FaSeedling />
     },
     {
       id: 3,
-      title: "Makueni Natural Structures",
+      title: " Natural Structures",
       category: "Eco-Construction",
-      image: "./roadwork-ahead-with-reflections-4799875.jpg",
+      image: Makueni,
       description: "Building of community spaces using natural materials and sustainable techniques in Makueni County.",
       features: ["Bamboo construction", "Natural ventilation", "Rainwater collection"],
       icon: <FaTree />
     },
     {
       id: 4,
-      title: "Embu Eco-Center",
+      title: "Eco-Center",
       category: "Community",
-      image: "./roadwork-ahead-with-reflections-4799875.jpg",
+      image: Western,
       description: "Development of a community center in Embu using natural building methods and renewable energy.",
       features: ["Solar power", "Natural materials", "Community workshops"],
       icon: <FaBuilding />
@@ -48,7 +57,7 @@ function HomeProjects() {
       id: 5,
       title: "Local Church Interior Design",
       category: "Interior",
-      image: "./roadwork-ahead-with-reflections-4799875.jpg",
+      image: Church,
       description: "Interior renovation and design of a local church, creating a welcoming space for worship and community gatherings.",
       features: ["Custom woodwork", "Improved acoustics", "Accessible design"],
       icon: <FaChurch />
@@ -57,7 +66,7 @@ function HomeProjects() {
       id: 6,
       title: "Rural Electrification Project",
       category: "Infrastructure",
-      image: "./roadwork-ahead-with-reflections-4799875.jpg",
+      image: Solar,
       description: "Installation of electricity systems in rural communities, connecting homes and facilities to reliable power sources.",
       features: ["Solar installations", "Wiring for 50 homes", "Community training"],
       icon: <FaBolt />
@@ -66,7 +75,7 @@ function HomeProjects() {
       id: 7,
       title: "Community Storage Facility",
       category: "Agricultural",
-      image: "./roadwork-ahead-with-reflections-4799875.jpg",
+      image: Tank,
       description: "Construction of a modern storage facility for agricultural produce to reduce post-harvest losses.",
       features: ["Climate control", "Pest management", "Loading bays"],
       icon: <FaWarehouse />
@@ -75,7 +84,7 @@ function HomeProjects() {
       id: 8,
       title: "Water Harvesting Systems",
       category: "Infrastructure",
-      image: "./roadwork-ahead-with-reflections-4799875.jpg",
+      image: Water,
       description: "Installation of water harvesting and storage systems for communities facing water scarcity.",
       features: ["Rainwater collection", "Filtration systems", "Storage tanks"],
       icon: <FaWater />

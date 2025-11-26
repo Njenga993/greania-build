@@ -37,8 +37,8 @@ function Navbar() {
             <a href="tel:+254791554319" className="contact-link">
               <FaPhone /> +254 791 554 319
             </a>
-            <a href="mailto:info@greaniabuild.com" className="contact-link">
-              <MdEmail /> info@greaniabuilding.com
+            <a href="mailto:info@greaniabuild.co.ke" className="contact-link">
+              <MdEmail /> info@greaniabuild.co.ke
             </a>
           </div>
         </div>
