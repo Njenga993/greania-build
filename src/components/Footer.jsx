@@ -13,6 +13,7 @@ import {
   FaEnvelope,
   FaMapMarkerAlt
 } from 'react-icons/fa';
+import logo from '/cropped-greanialogo3-1.png';
 
 function Footer() {
   const [expandedSections, setExpandedSections] = useState({
@@ -44,7 +45,7 @@ function Footer() {
           {/* Company Info */}
           <div className="footer-company">
             <div className="footer-logo">
-              <img src="/greania-build/cropped-greanialogo3-1.png" alt="Greania Build" />
+              <img src= {logo} alt="Greania Build" />
             </div>
             <p className="footer-mission">
               Building the future with integrity and excellence. We transform visions into strong foundations.

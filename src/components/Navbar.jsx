@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import '../styles/navbar.css';
 import { FaBars, FaTimes, FaFacebook, FaTwitter, FaInstagram, FaPhone } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
+import logo from '/cropped-greanialogo3-1.png';
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -50,7 +51,7 @@ function Navbar() {
           <div className="navbar-left">
             <Link to="/" className="logo-link">
               <img 
-                src="/greania-build/cropped-greanialogo3-1.png" 
+                src= {logo} 
                 alt="Greania Build" 
                 className="logo-img"
               />
@@ -58,7 +59,7 @@ function Navbar() {
           </div>
 
           <ul className="navbar-center">
-            <li><NavLink to="/greania-build/" onClick={closeMenu}>Home</NavLink></li>
+            <li><NavLink to="/" onClick={closeMenu}>Home</NavLink></li>
             <li><NavLink to="/about" onClick={closeMenu}>About</NavLink></li>
             <li><NavLink to="/services" onClick={closeMenu}>Services</NavLink></li>
             <li><NavLink to="/projects" onClick={closeMenu}>Projects</NavLink></li>
@@ -92,7 +93,7 @@ function Navbar() {
         <div className="mobile-menu-container">
           <div className="mobile-menu-header">
             <img 
-              src="/greania-build/cropped-greanialogo3-1.png" 
+              src="/cropped-greanialogo3-1.png" 
               alt="Greania Build" 
               className="mobile-logo"
             />
