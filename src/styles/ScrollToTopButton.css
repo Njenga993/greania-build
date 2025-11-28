@@ -1,7 +1,7 @@
 .scroll-to-top {
   position: fixed;
   bottom: 30px;
-  right: 30px;
+  right: -30px;
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -42,7 +42,7 @@
 .scroll-to-top {
   position: fixed;
   bottom: 30px;
-  right: 30px;
+  right: -30px;
   width: 45px;
   height: 45px;
   border-radius: 50%;

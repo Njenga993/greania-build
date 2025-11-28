@@ -68,7 +68,7 @@ function Hero() {
               <div className="carousel-caption">
                 <h3>Precision Road Construction</h3>
                 <p>Connecting communities with durable and safe roads, built to last generations.</p>
-                <Link to="/services/road-construction" className="caption-link">Learn More →</Link>
+                <Link to="/services" className="caption-link">Learn More →</Link>
               </div>
             </div>
 
@@ -77,7 +77,7 @@ function Hero() {
               <div className="carousel-caption">
                 <h3>Modern Commercial Excellence</h3>
                 <p>From blueprints to handover — we deliver business-ready spaces with style and structure.</p>
-                <Link to="/services/commercial" className="caption-link">Learn More →</Link>
+                <Link to="/services" className="caption-link">Learn More →</Link>
               </div>
             </div>
 
@@ -86,7 +86,7 @@ function Hero() {
               <div className="carousel-caption">
                 <h3>Teamwork That Builds Nations</h3>
                 <p>Our dedicated engineers and workers bring your vision to life with precision and care.</p>
-                <Link to="/about/team" className="caption-link">Meet Our Team →</Link>
+                <Link to="/about" className="caption-link">Learn More →</Link>
               </div>
             </div>
           </Carousel>

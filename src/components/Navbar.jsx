@@ -35,8 +35,8 @@ function Navbar() {
             <Link to="/contact" className="announcement-link">Contact Us Today!</Link>
           </span>
           <div className="announcement-contacts">
-            <a href="tel:+254791554319" className="contact-link">
-              <FaPhone /> +254 791 554 319
+            <a href="tel:+254757657217" className="contact-link">
+              <FaPhone /> +254 757 657 217
             </a>
             <a href="mailto:info@greaniabuild.co.ke" className="contact-link">
               <MdEmail /> info@greaniabuild.co.ke
@@ -51,7 +51,7 @@ function Navbar() {
           <div className="navbar-left">
             <Link to="/" className="logo-link">
               <img 
-                src="/greania-build/cropped-greanialogo3-1.png" 
+                src= {logo}
                 alt="Greania Build" 
                 className="logo-img"
               />
@@ -115,8 +115,8 @@ function Navbar() {
           </ul>
 
           <div className="mobile-contact-info">
-            <a href="tel:+1234567890" className="mobile-contact-link">
-              <FaPhone /> +123 456 7890
+            <a href="tel:+254757657217" className="mobile-contact-link">
+              <FaPhone /> +254 757 657 217
             </a>
             <a href="mailto:info@greaniabuild.com" className="mobile-contact-link">
               <MdEmail /> info@greaniabuild.com

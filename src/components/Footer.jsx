@@ -53,7 +53,7 @@ function Footer() {
             <div className="footer-contact">
               <div className="contact-item">
                 <FaPhone className="contact-icon" />
-                <span>+254 791 554 319</span>
+                <span>+254 757 657 217</span>
               </div>
               <div className="contact-item">
                 <FaEnvelope className="contact-icon" />

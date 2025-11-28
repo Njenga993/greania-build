@@ -81,7 +81,6 @@ function HomeContact() {
               <div className="info-icon"><FaPhone /></div>
               <div className="info-content">
                 <h3>Phone</h3>
-                <p>+254 791 554 319</p>
                 <p>+254 757 657 217</p>
               </div>
             </div>
