@@ -1,10 +1,14 @@
 /* src/styles/about-section.css */
+/* Styles for AboutSection component only */
+
 .about-section {
   background-color: #fff;
   padding: 5rem 1rem;
   position: relative;
+  overflow: hidden;
 }
 
+/* --- Content Container --- */
 .about-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -19,6 +23,7 @@
   min-width: 300px;
 }
 
+/* --- Section Header --- */
 .section-header {
   margin-bottom: 2rem;
 }
@@ -48,6 +53,7 @@
   margin: 1.5rem 0;
 }
 
+/* --- Text Content --- */
 .about-text p {
   color: #5a6a72;
   line-height: 1.7;
@@ -55,6 +61,7 @@
   font-size: 1.05rem;
 }
 
+/* --- Highlights Grid --- */
 .about-highlights {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -104,6 +111,7 @@
   margin: 0;
 }
 
+/* --- Call to Action Button --- */
 .about-button {
   display: inline-flex;
   align-items: center;
@@ -121,8 +129,10 @@
 .about-button:hover {
   background-color: #00362d;
   transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* --- Image Section --- */
 .about-image {
   flex: 1;
   min-width: 300px;
@@ -134,12 +144,14 @@
   height: auto;
   border-radius: 12px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin-bottom: 1rem;
 }
 
 .experience-badge {
   position: absolute;
-  bottom: -20px;
-  right: -20px;
+  bottom: 20px;
+  right: 20px;
   background-color: #ffc107;
   color: #002f34;
   padding: 1.5rem;
@@ -159,9 +171,11 @@
   font-size: 0.8rem;
   display: block;
   font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-/* Decorative Elements */
+/* --- Decorative Element --- */
 .about-section::before {
   content: '';
   position: absolute;
@@ -170,9 +184,10 @@
   width: 50%;
   height: 100%;
   background: linear-gradient(135deg, rgba(0, 77, 64, 0.05) 0%, rgba(0, 77, 64, 0.01) 100%);
-  z-index: 1;
+  z-index: 0;
 }
-/* Responsive Adjustments */
+
+/* --- Responsive Adjustments --- */
 @media (max-width: 1024px) {
   .about-container {
     gap: 2rem;
@@ -209,7 +224,8 @@
   
   .experience-badge {
     padding: 1rem;
-    right: 0;
+    right: 10px;
+    bottom: 10px;
   }
   
   .experience-badge span {

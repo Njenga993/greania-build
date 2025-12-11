@@ -1,8 +1,8 @@
-/* src/styles/services-page.css */
-/* Styles for the overall ServicesPage layout and structure */
+/* src/styles/projects-page.css */
+/* Styles for the overall ProjectsPage layout and structure */
 
 /* --- Base & Utility Styles --- */
-.services-page {
+.projects-page {
   background-color: #f9f9f9;
 }
 
@@ -54,93 +54,43 @@
   font-weight: 500;
 }
 
-/* --- Services Hero Section --- */
-.services-hero {
+/* --- Projects Hero Section --- */
+.projects-hero {
   background-color: #004d40;
   padding: 4rem 0;
   text-align: center;
   color: #fff;
-  /* Optional: Add a background image */
-  /* background-image: linear-gradient(rgba(0, 77, 64, 0.9), rgba(0, 77, 64, 0.9)), url('/path/to/your/hero-image.jpg'); */
+  background-image: linear-gradient(rgba(0, 77, 64, 0.9), rgba(0, 77, 64, 0.9)), url('/path/to/your/hero-image.jpg'); /* Optional: Add a hero image */
   background-size: cover;
   background-position: center;
 }
 
-.services-hero h1 {
+.projects-hero h1 {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
   font-weight: 700;
   color: #fff;
 }
 
-.services-hero p {
+.projects-hero p {
   max-width: 800px;
   margin: 0 auto;
   font-size: 1.1rem;
   line-height: 1.6;
 }
 
-/* --- Services Introduction Section --- */
-.services-intro {
-  background-color: #fff;
-  padding: 4rem 0;
-  text-align: center;
-}
-
-.services-intro h2 {
-  font-size: 2rem;
-  color: #002f34;
-  margin-bottom: 1.5rem;
-  position: relative;
-  padding-bottom: 1rem;
-}
-
-.services-intro h2::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 3px;
-  background-color: #ffc107;
-}
-
-.services-intro p {
-  max-width: 800px;
-  margin: 0 auto;
-  color: #5a6a72;
-  line-height: 1.7;
-  font-size: 1.05rem;
-}
-
-/* --- Services List Section --- */
-.services-list {
+/* --- Main Content Wrapper --- */
+.projects-list-section {
   padding: 4rem 0;
 }
 
-/* Style for the "Inquire" link on each service card */
-.service-cta {
-  display: inline-block;
-  margin-top: auto;
-  color: #004d40;
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.service-cta:hover {
-  color: #00362d;
-  transform: translateX(5px);
-}
-
-/* --- Service Process Section --- */
-.service-process {
+/* --- Testimonials Section --- */
+.testimonial-section {
   background-color: #fff;
   padding: 4rem 0;
 }
 
-.service-process h2 {
+.testimonial-section h2 {
   text-align: center;
   font-size: 2rem;
   color: #002f34;
@@ -149,7 +99,7 @@
   padding-bottom: 1rem;
 }
 
-.service-process h2::after {
+.testimonial-section h2::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -160,47 +110,9 @@
   background-color: #ffc107;
 }
 
-.process-steps {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+.testimonial-break {
   max-width: 1000px;
   margin: 0 auto;
-}
-
-.step {
-  text-align: center;
-  padding: 1.5rem;
-  transition: transform 0.3s ease;
-}
-
-.step:hover {
-  transform: translateY(-5px);
-}
-
-.step-number {
-  width: 60px;
-  height: 60px;
-  background-color: #004d40;
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin: 0 auto 1.5rem;
-}
-
-.step h3 {
-  color: #002f34;
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-}
-
-.step p {
-  color: #5a6a72;
-  line-height: 1.6;
 }
 
 /* --- Call to Action Section --- */
@@ -249,39 +161,40 @@
 
 /* --- Page-Level Responsive Adjustments --- */
 @media (max-width: 768px) {
-  .services-hero {
+  .projects-hero {
     padding: 3rem 0;
   }
   
-  .services-hero h1 {
+  .projects-hero h1 {
     font-size: 2rem;
   }
   
-  .services-intro,
-  .services-list,
-  .service-process {
+  .projects-list-section,
+  .testimonial-section {
     padding: 3rem 0;
   }
   
-  .services-intro h2,
-  .service-process h2,
-  .cta-section h2 {
+  .testimonial-section h2 {
     font-size: 1.8rem;
   }
   
-  .process-steps {
-    grid-template-columns: 1fr;
+  .cta-section {
+    padding: 3rem 0;
+  }
+  
+  .cta-section h2 {
+    font-size: 1.8rem;
   }
 }
 
 @media (max-width: 576px) {
-  .services-hero h1 {
+  .projects-hero h1 {
     font-size: 1.8rem;
   }
   
-  .services-intro h2,
-  .service-process h2,
+  .testimonial-section h2,
   .cta-section h2 {
     font-size: 1.6rem;
   }
 }
+
