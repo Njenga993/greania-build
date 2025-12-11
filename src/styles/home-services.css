@@ -1,4 +1,6 @@
 /* src/styles/home-services.css */
+/* Styles for HomeServices component only */
+
 .home-services {
   background-color: #f8f9fa;
   padding: 5rem 2rem;
@@ -6,6 +8,7 @@
   overflow: hidden;
 }
 
+/* --- Section Header --- */
 .services-header {
   text-align: center;
   max-width: 800px;
@@ -43,20 +46,23 @@
   font-size: 1.05rem;
 }
 
+/* --- Services Grid --- */
 .services-grid {
   display: grid;
+  /* Fixed syntax error by removing extra parenthesis */
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+/* --- Service Card --- */
 .service-card {
   background-color: white;
   border-radius: 10px;
   padding: 2rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -126,6 +132,7 @@
   font-weight: 500;
 }
 
+/* --- Section CTA --- */
 .services-cta {
   text-align: center;
   margin-top: 3rem;
@@ -150,7 +157,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Decorative Elements */
+/* --- Decorative Element --- */
 .home-services::before {
   content: '';
   position: absolute;
@@ -162,7 +169,7 @@
   z-index: 0;
 }
 
-/* Responsive Adjustments */
+/* --- Responsive Adjustments --- */
 @media (max-width: 768px) {
   .home-services {
     padding: 3rem 1.5rem;

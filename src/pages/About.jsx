@@ -1,105 +1,149 @@
+// src/pages/About.jsx
 import React from 'react';
+import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import AboutSection from '../components/AboutSection';
+import { milestonesData } from '../data/milestones.jsx'; // Import timeline data
 import '../styles/about-page.css';
+
+
+// Function to dynamically generate schema for milestones
+const generateMilestonesSchema = (milestones) => {
+  return milestones.map(milestone => ({
+    "@type": "Event",
+    "name": milestone.year,
+    "startDate": milestone.year,
+    "description": milestone.description
+  }));
+};
+
+// Schema for About page
+const aboutPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "About Greania Build - Sustainable Construction in Kenya",
+  "description": "Learn about Greania Build's journey, expertise in sustainable construction, and our commitment to quality in Kenya's construction industry since 2020.",
+  "url": "https://greaniabuild.co.ke/about",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Greania Build Ltd",
+    "url": "https://greaniabuild.co.ke/",
+    "foundingDate": "2020",
+    "sameAs": [
+      "https://www.facebook.com/greaniabuild",
+      "https://www.instagram.com/greaniabuild"
+    ]
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://greaniabuild.co.ke/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About",
+        "item": "https://greaniabuild.co.ke/about"
+      }
+    ]
+  }
+};
+
+// Company milestones schema
+const milestonesSchema = {
+  "@context": "https://schema.org",
+  "@type": "Corporation",
+  "name": "Greania Build Ltd",
+  "foundingDate": "2020",
+  "description": "Kenya's trusted construction partner specializing in sustainable building, roofing, renovations, and green building solutions.",
+  "url": "https://greaniabuild.co.ke/",
+  // Dynamically generate the 'milestones' array
+  "milestones": generateMilestonesSchema(milestonesData)
+};
 
 function About() {
   return (
-    <main className="about-page">
-      <AboutSection />
+    <>
+      <SEO 
+        title="About Greania Build - Sustainable Construction in Kenya"
+        description="Learn about Greania Build's journey, expertise in sustainable construction, and our commitment to quality in Kenya's construction industry since 2020."
+        keywords="Greania Build about, construction company Kenya, sustainable building Kenya, construction history Kenya, green building Kenya"
+        url="https://greaniabuild.co.ke/about"
+        pageSpecificSchema={aboutPageSchema}
+      />
+      
+      <main className="about-page">
+        {/* Breadcrumb Navigation */}
+        <nav aria-label="Breadcrumb" className="breadcrumb-nav">
+          <div className="container">
+            <ol className="breadcrumb">
+              <li><Link to="/">Home</Link></li>
+              <li aria-current="page">About</li>
+            </ol>
+          </div>
+        </nav>
 
-      {/* Why Choose Us Section */}
-      <section className="why-choose-us">
-        <div className="container">
-          <h2>Why Choose Greania Build Solutions?</h2>
-          <div className="features">
-            <div className="feature-card">
-              <h3>Certified Experts</h3>
-              <p>Our team consists of licensed professionals with years of experience in every construction discipline.</p>
-            </div>
-            <div className="feature-card">
-              <h3>Client-Centered Approach</h3>
-              <p>We prioritize your goals, budget, and satisfaction — every step of the way.</p>
-            </div>
-            <div className="feature-card">
-              <h3>Proven Track Record</h3>
-              <p>From roads to residential homes, our portfolio showcases a legacy of trust and performance.</p>
+        {/* About Section */}
+        <section aria-labelledby="about-heading">
+          <h1 id="about-heading" className="visually-hidden">About Greania Build</h1>
+          <AboutSection />
+        </section>
+
+        {/* Why Choose Us Section */}
+        <section className="why-choose-us" aria-labelledby="why-choose-heading">
+          <div className="container">
+            <h2 id="why-choose-heading">Why Choose Greania Build Solutions?</h2>
+            <div className="features">
+              <div className="feature-card">
+                <h3>Certified Experts</h3>
+                <p>Our team consists of licensed professionals with years of experience in every construction discipline.</p>
+              </div>
+              <div className="feature-card">
+                <h3>Client-Centered Approach</h3>
+                <p>We prioritize your goals, budget, and satisfaction — every step of the way.</p>
+              </div>
+              <div className="feature-card">
+                <h3>Proven Track Record</h3>
+                <p>From roads to residential homes, our portfolio showcases a legacy of trust and performance.</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/*
-      <section className="our-team">
-        <div className="container">
-          <h2>Meet Our Leadership Team</h2>
-          <p className="team-intro">
-            Greania Build Solutions is driven by a passionate team of engineers, project managers, and innovators committed to delivering excellence.
-          </p>
-          <div className="team-cards">
-            <div className="team-member">
-              <div className="photo-placeholder">CEO</div>
-              <h4>John Mwangi</h4>
-              <p>Founder & Chief Executive Officer</p>
-            </div>
-            <div className="team-member">
-              <div className="photo-placeholder">CTO</div>
-              <h4>Grace Wambui</h4>
-              <p>Head of Technical Operations</p>
-            </div>
-            <div className="team-member">
-              <div className="photo-placeholder">PM</div>
-              <h4>Kevin Otieno</h4>
-              <p>Senior Project Manager</p>
-            </div>
+        {/* Timeline / Milestones */}
+        <section className="milestones" aria-labelledby="journey-heading">
+          <div className="container">
+            <h2 id="journey-heading">Our Journey</h2>
+            <ul className="timeline">
+              {milestonesData.map((milestone, index) => (
+                <li key={index}>
+                  <span className="year">{milestone.year}</span>
+                  <p>{milestone.description}</p>
+                </li>
+              ))}
+            </ul>
           </div>
-        </div>
-      </section>*/}
+        </section>
 
-      {/* Timeline / Milestones */}
-      <section className="milestones">
-  <div className="container">
-    <h2>Our Journey</h2>
-    <ul className="timeline">
-      <li>
-        <span className="year">2020</span>
-        <p>Greania Build Solutions was founded as a specialized construction company, completing our first commercial residential project in Nairobi and establishing our reputation for quality craftsmanship.</p>
-      </li>
-      <li>
-        <span className="year">2021</span>
-        <p>Secured our first major contract with an international NGO to construct sustainable housing units, demonstrating our expertise in eco-friendly building techniques and traditional construction methods.</p>
-      </li>
-      <li>
-        <span className="year">2022</span>
-        <p>Expanded into commercial construction while securing 15+ new contracts, and established our Natural Building Division after winning a competitive bid for specialized community infrastructure projects.</p>
-      </li>
-      <li>
-        <span className="year">2023</span>
-        <p>Completed a landmark contract for the construction of 10 mud houses as part of a government housing initiative, and successfully delivered our first seedbank facility for an agricultural development organization.</p>
-      </li>
-      <li>
-        <span className="year">2023</span>
-        <p>Launched our Sacred Spaces Renovation services after securing contracts with 5 religious institutions for interior design and structural enhancement projects.</p>
-      </li>
-      <li>
-        <span className="year">2024</span>
-        <p>Introduced civil engineering division and roadworks expertise while completing contracted rural electrification projects for 8 communities through government and private sector partnerships.</p>
-      </li>
-      <li>
-        <span className="year">2024</span>
-        <p>Established fee-based construction training programs, certifying 50+ professionals in sustainable construction techniques and creating an additional revenue stream for the company.</p>
-      </li>
-      <li>
-        <span className="year">2025</span>
-        <p>completed 50+ contracted projects, including water harvesting systems and natural structures built for various development organizations and private clients.</p>
-      </li>
-      <li>
-        <span className="year">2025</span>
-        <p>Delivered our largest seedbank construction contract to date, serving 3 counties for a consortium of agricultural organizations, while expanding our Eco-Friendly Materials division to meet growing market demand.</p>
-      </li>
-    </ul>
-  </div>
-</section>
-    </main>
+        {/* Call to Action */}
+        <section className="cta-section" aria-labelledby="cta-heading">
+          <div className="container">
+            <h2 id="cta-heading">Ready to Build Your Dream Project?</h2>
+            <p>Join our growing list of satisfied clients who have experienced the Greania Build difference.</p>
+            <Link to="/contact" className="cta-button">Get In Touch</Link>
+          </div>
+        </section>
+
+        {/* Schema for milestones */}
+        <script type="application/ld+json">
+          {JSON.stringify(milestonesSchema)}
+        </script>
+      </main>
+    </>
   );
 }
 

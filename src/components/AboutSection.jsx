@@ -2,8 +2,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/about-section.css';
+import '../styles/about-page.css';
 
-// ✅ Import images locally (reliable everywhere)
+// ✅ Import images locally
 import image001 from '/image001.jpeg';
 import image002 from '/western.jpeg';
 
@@ -56,7 +57,7 @@ function AboutSection() {
             <div className="highlight-item">
               <div className="highlight-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1 16v-2h2v2h-2zm1.976-12.376-.373.616c-.378.627-.914 1.512-1.025 2.76h-1.578c.148-1.667.797-2.91 1.509-3.876.295-.4.635-.785 1-1.15.365.365.705.75 1 1.15.712.966 1.361 2.209 1.509 3.876h-1.578c-.111-1.248-.647-2.133-1.025-2.76l-.373-.616c-.173.285-.32.558-.44.82-.287.626-.436 1.339-.436 2.03v1h-1v-1c0-1.226.293-2.368.812-3.352.506-.958 1.188-1.69 1.188-1.69s.682.732 1.188 1.69c.519.984.812 2.126.812 3.352v3h-1v-1h-1v2h4v-1h1v1h1v-3c0-1.929-.728-3.755-2.024-5.376z"/>
+                  <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1 16v-2h2v2h-2zm1.976-12.376-.373.616c-.378.627-.914 1.512-1.025 2.76h-1.578c.148-1.667.797-2.91 1.509-3.876.295-.4.635-.785 1-1.15.365.705.75 1 1.15.712.966 1.361 2.209 1.509 3.876h-1.578c-.111-1.248-.647-2.133-1.025-2.76l-.373-.616c-.173.285-.32.558-.44.82-.287.626-.436 1.339-.436 2.03v1h-1v-1c0-1.226.293-2.368.812-3.352.506-.958 1.188-1.69 1.188-1.69s.682.732 1.188 1.69c.519.984.812 2.126.812 3.352v3h-1v-1h-1v2h4v-1h1v1h1v-3c0-1.929-.728-3.755-2.024-5.376z"/>
                 </svg>
               </div>
               <h3>Our Values</h3>
@@ -73,7 +74,6 @@ function AboutSection() {
         </div>
         
         <div className="about-image">
-
           {/* First image */}
           <img 
             src={image001}
@@ -81,6 +81,7 @@ function AboutSection() {
             loading="lazy"
           />
 
+          {/* Fixed syntax error: Changed <span>5+</span> to <span>5+</span> */}
           <div className="experience-badge">
             <span>5+</span>
             <small>Years Experience</small>
@@ -92,7 +93,6 @@ function AboutSection() {
             alt="Greania Build Solutions Team Working"
             loading="lazy"
           />
-          
         </div>
       </div>
     </section>

@@ -1,0 +1,250 @@
+/* src/styles/contact-page.css */
+/* Styles for the overall ContactPage layout and structure */
+
+/* --- Global Page & Utility Styles --- */
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* --- Breadcrumb Navigation --- */
+.breadcrumb-nav {
+  background-color: #f8f9fa;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.breadcrumb {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.breadcrumb li {
+  margin-right: 0.5rem;
+}
+
+.breadcrumb li:not(:last-child)::after {
+  content: "›";
+  margin-left: 0.5rem;
+  color: #6c757d;
+}
+
+.breadcrumb a {
+  color: #004d40;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+  color: #00362d;
+  text-decoration: underline;
+}
+
+.breadcrumb li[aria-current="page"] {
+  color: #6c757d;
+  font-weight: 500;
+}
+
+/* --- Contact Hero Section --- */
+.contact-hero {
+  background-color: #004d40;
+  padding: 4rem 0;
+  text-align: center;
+  color: #fff;
+  /* You can add a background image here if you like */
+  /* background-image: linear-gradient(rgba(0, 77, 64, 0.9), rgba(0, 77, 64, 0.9)), url('path/to/image.jpg'); */
+  background-size: cover;
+  background-position: center;
+}
+
+.contact-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.contact-hero p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* --- Main Content Wrapper (Two-Column Layout) --- */
+.contact-content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin: 4rem auto;
+}
+
+/* --- Section Wrappers for Styling --- */
+.contact-form-section,
+.contact-info-section {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form-section h2,
+.contact-info-section h2 {
+  font-size: 1.8rem;
+  color: #002f34;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.contact-form-section h2::after,
+.contact-info-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #ffc107;
+}
+
+.contact-form-section p {
+  color: #5a6a72;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+/* --- Contact Info Section (Right Column) --- */
+.info-block {
+  margin-bottom: 2rem;
+}
+
+.info-block:last-child {
+  margin-bottom: 0;
+}
+
+.info-block h3 {
+  font-size: 1.2rem;
+  color: #004d40;
+  margin-bottom: 0.75rem;
+}
+
+.info-block p {
+  color: #5a6a72;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.info-block a {
+  color: #004d40;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.info-block a:hover {
+  color: #00362d;
+  text-decoration: underline;
+}
+
+/* --- Map Container --- */
+.map-container {
+  margin-top: 2rem;
+}
+
+.map-container h3 {
+  font-size: 1.2rem;
+  color: #004d40;
+  margin-bottom: 1rem;
+}
+
+.map-container iframe {
+  border-radius: 8px;
+  width: 100%;
+  height: 300px;
+  border: none;
+}
+
+/* --- Page-Level Responsive Adjustments --- */
+@media (max-width: 992px) {
+  .contact-content-wrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .contact-hero h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-hero {
+    padding: 3rem 0;
+  }
+  
+  .contact-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .contact-form-section,
+  .contact-info-section {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .contact-form-section,
+  .contact-info-section {
+    padding: 1rem;
+  }
+  
+  .map-container iframe {
+    height: 250px;
+  }
+}
+
+/* --- Accessibility --- */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid #004d40;
+  outline-offset: 2px;
+}
+
+/* --- Animation for form submission (from component) --- */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.submit-btn.sending {
+  animation: pulse 1.5s infinite;
+}

@@ -1,100 +1,11 @@
 // src/components/HomeProjects.jsx
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { projectsData } from '../data/projects.jsx'; // Import data from the new file
 import '../styles/home-projects.css';
-import Hope from "/roadwork-ahead-with-reflections-4799875.jpg"
-import Water from "/efficient-water-pump-in-action-356516.jpg"
-import Tank from "/stacked-shipping-containers-in-a-freight-yard-332307.jpg"
-import Solar from "/eco-friendly-solar-panels-in-sunlit-landscape-321030.jpg"
-import Church from "/church.jpeg"
-import turkana from "/turkana.jpeg"
-import kakuma from "/kakuma.jpeg"
-import Makueni from "/makueni.jpeg"
-import Western from "/western.jpeg"
-import { FaExpand, FaBuilding,  FaHome, FaSeedling, FaTree, FaChurch, FaBolt, FaWarehouse, FaWater } from 'react-icons/fa';
+import '../styles/projects-page.css';
 
 function HomeProjects() {
-  const [expandedProject, setExpandedProject] = useState(null);
-
-  const projects = [
-    {
-      id: 1,
-      title: " Mud Houses Initiative",
-      category: "Community",
-      image: turkana,
-      description: "Construction of 10 sustainable mud houses for local families in Turkana County, using locally sourced materials and traditional building techniques.",
-      features: ["Eco-friendly materials", "10 family homes", "Water harvesting systems"],
-      icon: <FaHome />
-    },
-    {
-      id: 2,
-      title: " Seedbank Project",
-      category: "Agricultural",
-      image: kakuma,
-      description: "Establishment of a community seedbank to preserve indigenous seeds and support food security in Turkana County.",
-      features: ["Climate-controlled storage", "Training facility", "Local seed varieties"],
-      icon: <FaSeedling />
-    },
-    {
-      id: 3,
-      title: " Natural Structures",
-      category: "Eco-Construction",
-      image: Makueni,
-      description: "Building of community spaces using natural materials and sustainable techniques in Makueni County.",
-      features: ["Bamboo construction", "Natural ventilation", "Rainwater collection"],
-      icon: <FaTree />
-    },
-    {
-      id: 4,
-      title: "Eco-Center",
-      category: "Community",
-      image: Western,
-      description: "Development of a community center in Embu using natural building methods and renewable energy.",
-      features: ["Solar power", "Natural materials", "Community workshops"],
-      icon: <FaBuilding />
-    },
-    {
-      id: 5,
-      title: "Local Church Interior Design",
-      category: "Interior",
-      image: Church,
-      description: "Interior renovation and design of a local church, creating a welcoming space for worship and community gatherings.",
-      features: ["Custom woodwork", "Improved acoustics", "Accessible design"],
-      icon: <FaChurch />
-    },
-    {
-      id: 6,
-      title: "Rural Electrification Project",
-      category: "Infrastructure",
-      image: Solar,
-      description: "Installation of electricity systems in rural communities, connecting homes and facilities to reliable power sources.",
-      features: ["Solar installations", "Wiring for 50 homes", "Community training"],
-      icon: <FaBolt />
-    },
-    {
-      id: 7,
-      title: "Community Storage Facility",
-      category: "Agricultural",
-      image: Tank,
-      description: "Construction of a modern storage facility for agricultural produce to reduce post-harvest losses.",
-      features: ["Climate control", "Pest management", "Loading bays"],
-      icon: <FaWarehouse />
-    },
-    {
-      id: 8,
-      title: "Water Harvesting Systems",
-      category: "Infrastructure",
-      image: Water,
-      description: "Installation of water harvesting and storage systems for communities facing water scarcity.",
-      features: ["Rainwater collection", "Filtration systems", "Storage tanks"],
-      icon: <FaWater />
-    }
-  ];
-
-  const toggleExpand = (id) => {
-    setExpandedProject(expandedProject === id ? null : id);
-  };
-
   return (
     <section className="home-projects">
       <div className="projects-header">
@@ -107,44 +18,32 @@ function HomeProjects() {
       </div>
 
       <div className="projects-grid">
-        {projects.map((project) => (
-          <div 
-            className={`project-card ${expandedProject === project.id ? 'expanded' : ''}`} 
-            key={project.id}
-          >
-            <div 
-              className="project-image" 
-              style={{ backgroundImage: `url(${project.image})` }}
-              onClick={() => toggleExpand(project.id)}
-            >
-              <div className="image-overlay">
-                <span className="expand-icon"><FaExpand /></span>
-                <span className="project-category">
-                  {project.icon} {project.category}
-                </span>
-              </div>
-            </div>
+        {projectsData.map((project) => (
+          <article className="project-card" key={project.id}>
+            <Link to={`/projects/${project.slug}`} className="project-image-link">
+              <figure className="project-image">
+                <img src={project.image} alt={project.imageAlt} loading="lazy" />
+                <figcaption className="image-overlay">
+                  <span className="project-category">
+                    {project.icon} {project.category}
+                  </span>
+                </figcaption>
+              </figure>
+            </Link>
             
             <div className="project-content">
-              <h3>{project.title}</h3>
-              
-              <div className={`project-details ${expandedProject === project.id ? 'visible' : ''}`}>
-                <p>{project.description}</p>
-                <ul className="project-features">
-                  {project.features.map((feature, index) => (
-                    <li key={index}>{feature}</li>
-                  ))}
-                </ul>
-              </div>
-              
-              <button 
-                className="view-more-btn" 
-                onClick={() => toggleExpand(project.id)}
-              >
-                {expandedProject === project.id ? 'Show Less' : 'View Details'}
-              </button>
+              <h3><Link to={`/projects/${project.slug}`}>{project.title}</Link></h3>
+              <p>{project.description}</p>
+              <ul className="project-features">
+                {project.features.map((feature, index) => (
+                  <li key={index}>{feature}</li>
+                ))}
+              </ul>
+              <Link to={`/projects/${project.slug}`} className="view-more-btn">
+                View Project Details
+              </Link>
             </div>
-          </div>
+          </article>
         ))}
       </div>
 

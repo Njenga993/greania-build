@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
 import emailjs from "@emailjs/browser";
-import "../styles/home-contact.css";
+import "../styles/home-contact.css"; // Keep the component-specific styles
 
 function HomeContact() {
   const formRef = useRef();
@@ -81,7 +81,7 @@ function HomeContact() {
               <div className="info-icon"><FaPhone /></div>
               <div className="info-content">
                 <h3>Phone</h3>
-                <p>+254 757 657 217</p>
+                <p><a href="tel:+254757657217">+254 757 657 217</a></p>
               </div>
             </div>
 
@@ -89,8 +89,8 @@ function HomeContact() {
               <div className="info-icon"><FaEnvelope /></div>
               <div className="info-content">
                 <h3>Email</h3>
-                <p>info@greaniabuild.com</p>
-                <p>quotes@greaniabuild.com</p>
+                <p><a href="mailto:info@greaniabuild.com">info@greaniabuild.com</a></p>
+                <p><a href="mailto:quotes@greaniabuild.com">quotes@greaniabuild.com</a></p>
               </div>
             </div>
 
@@ -128,26 +128,13 @@ function HomeContact() {
               <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
             </div>
 
-            <button type="submit" className="submit-btn">
+            <button type="submit" className={`submit-btn ${loading ? "sending" : ""}`} disabled={loading}>
               {loading ? "Sending..." : <>Send Message <FiSend /></>}
             </button>
 
             {status && <p className="form-status">{status}</p>}
           </form>
         </div>
-      </div>
-
-      {/* Embedded Map */}
-      <div className="contact-map">
-        <iframe
-          title="Greania Build Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.742345845786!2d36.07321531526192!3d-0.2829148354188666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMMKwMTYnNTguNSJTIDM2wrAwNCczNS4yIkU!5e0!3m2!1sen!2ske!4v1620000000000!5m2!1sen!2ske"
-          width="100%"
-          height="450"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          loading="lazy"
-        ></iframe>
       </div>
     </section>
   );
