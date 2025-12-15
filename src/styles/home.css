@@ -1,10 +1,26 @@
 /* src/styles/home.css */
+/* Styles for the Home page layout and navigation */
+
+/* --- Base Styles --- */
 .home-page {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
 }
 
-/* Navigation Cards Section */
+/* --- Visually Hidden Class (for SEO & Accessibility) --- */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* --- Navigation Cards Section --- */
 .home-nav-cards {
   padding: 4rem 1rem;
   background-color: #f8f9fa;
@@ -48,6 +64,11 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.nav-card:hover .card-icon {
+  transform: scale(1.1);
 }
 
 .card-icon svg {
@@ -70,7 +91,7 @@
   margin: 0;
 }
 
-/* Responsive Adjustments */
+/* --- Responsive Adjustments --- */
 @media (max-width: 1024px) {
   .cards-container {
     gap: 1.5rem;
