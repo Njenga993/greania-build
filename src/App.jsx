@@ -10,6 +10,7 @@ import ContactPage from './pages/ContactPage';
 import ConstructionLoader from './components/ConstructionLoader';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import Snowfall from 'react-snowfall';
 // ... import other pages
 
 function App() {
@@ -40,10 +41,26 @@ function App() {
       {isLoading ? (
         <ConstructionLoader />
       ) : (
+        <div className="App">
+          {/* Main Application Layout */}
+          <Snowfall 
+  snowflakeCount={150} 
+  color="white"
+  style={{
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100vw',
+    height: '100vh',
+    zIndex: 9999, // very high
+    pointerEvents: 'none'
+  }}
+/>
         <>
+        
           <Navbar />
-          <Routes basename ="/greania-build/">
-            <Route path="/greania-build/" element={<Home />} />
+          <Routes basename ="/">
+            <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/projects" element={<ProjectsPage />} />
@@ -53,6 +70,7 @@ function App() {
           <ScrollToTopButton />
           <Footer />
         </>
+        </div>
       )}
     </>
   );

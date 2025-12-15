@@ -1,3 +1,4 @@
+// src/pages/Home.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
@@ -7,22 +8,59 @@ import HomeServices from '../components/HomeServices';
 import HomeProjects from '../components/HomeProjects';
 import HomeTestimonials from '../components/HomeTestimonials';
 import HomeContact from '../components/HomeContact';
+import { servicesData } from '../data/services'; // Import for schema
+import { projectsData } from '../data/projects'; // Import for schema
 import '../styles/home.css';
 
-// Home page specific schema
+// Function to generate schema for services shown on the home page
+const generateHomeServicesSchema = (services) => {
+  return services.slice(0, 6).map(service => ({ // Take first 6 services
+    "@type": "Service",
+    "name": service.title,
+    "description": service.description,
+    "provider": {
+      "@type": "Organization",
+      "name": "Greania Build Ltd",
+      "url": "https://greaniabuild.co.ke/"
+    }
+  }));
+};
+
+// Function to generate schema for projects shown on the home page
+const generateHomeProjectsSchema = (projects) => {
+  return projects.slice(0, 6).map(project => ({ // Take first 6 projects
+    "@type": "Project",
+    "name": project.title,
+    "description": project.description,
+    "image": `https://greaniabuild.co.ke${project.image}`,
+    "provider": {
+      "@type": "Organization",
+      "name": "Greania Build Ltd",
+      "url": "https://greaniabuild.co.ke/"
+    }
+  }));
+};
+
+// Enhanced Home page specific schema
 const homePageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "Greania Build - Sustainable Construction in Kenya",
-  "description": "Kenya's trusted construction partner specializing in sustainable building, roofing, renovations, and green building solutions.",
+  "description": "Kenya's trusted construction partner specializing in sustainable building, roofing, renovations, and green building solutions for residential, commercial, and community projects.",
   "url": "https://greaniabuild.co.ke/",
   "mainEntity": {
     "@type": "Organization",
     "name": "Greania Build Ltd",
     "url": "https://greaniabuild.co.ke/",
+    "logo": "https://greaniabuild.co.ke/assets/logo.png",
     "sameAs": [
       "https://www.facebook.com/greaniabuild",
       "https://www.instagram.com/greaniabuild"
+    ],
+    // Include the services and projects as part of the main entity
+    "hasPart": [
+      ...generateHomeServicesSchema(servicesData),
+      ...generateHomeProjectsSchema(projectsData)
     ]
   },
   "breadcrumb": {
@@ -44,10 +82,14 @@ function Home() {
       <SEO 
         title="Greania Build – Sustainable Construction, Roofing, Renovations & Green Building Solutions in Kenya"
         description="Greania Build is Kenya's trusted construction partner specializing in sustainable building, roofing, renovations, interiors, and energy-efficient solutions. We deliver quality workmanship, eco-friendly designs, and value-driven project execution for homeowners, developers, and commercial clients."
+        keywords="Greania Build, construction company Kenya, sustainable construction Kenya, roofing services Kenya, renovations Kenya, green building Kenya, house construction Kenya, interior design Kenya, real estate development Kenya, building contractor Nairobi, eco-friendly construction Kenya"
         pageSpecificSchema={homePageSchema}
       />
       
       <div className="home-page">
+        {/* Visually hidden H1 for SEO and accessibility */}
+        <h1 className="visually-hidden">Greania Build: Sustainable Construction in Kenya</h1>
+        
         {/* Hero Section - Main content area */}
         <section aria-labelledby="hero-heading">
           <Hero />

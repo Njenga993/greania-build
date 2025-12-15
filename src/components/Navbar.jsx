@@ -59,7 +59,7 @@ function Navbar() {
           </div>
 
           <ul className="navbar-center">
-            <li><NavLink to="/greania-build/" onClick={closeMenu}>Home</NavLink></li>
+            <li><NavLink to="/" onClick={closeMenu}>Home</NavLink></li>
             <li><NavLink to="/about" onClick={closeMenu}>About</NavLink></li>
             <li><NavLink to="/services" onClick={closeMenu}>Services</NavLink></li>
             <li><NavLink to="/projects" onClick={closeMenu}>Projects</NavLink></li>
