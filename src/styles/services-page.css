@@ -1,7 +1,11 @@
 /* src/styles/services-page.css */
-/* Styles for the overall ServicesPage layout and structure */
+/* ==========================================================================
+   SERVICES PAGE STYLES - SEO Optimized for Greania Build
+   ========================================================================== */
 
-/* --- Base & Utility Styles --- */
+/* ==========================================================================
+   1. BASE & UTILITY STYLES
+   ========================================================================== */
 .services-page {
   background-color: #f9f9f9;
 }
@@ -12,7 +16,9 @@
   padding: 0 2rem;
 }
 
-/* --- Breadcrumb Navigation --- */
+/* ==========================================================================
+   2. BREADCRUMB NAVIGATION
+   ========================================================================== */
 .breadcrumb-nav {
   background-color: #f8f9fa;
   padding: 1rem 0;
@@ -29,6 +35,8 @@
 
 .breadcrumb li {
   margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
 }
 
 .breadcrumb li:not(:last-child)::after {
@@ -41,6 +49,7 @@
   color: #004d40;
   text-decoration: none;
   transition: color 0.3s ease;
+  font-weight: 500;
 }
 
 .breadcrumb a:hover,
@@ -51,116 +60,93 @@
 
 .breadcrumb li[aria-current="page"] {
   color: #6c757d;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   3. SEO HEADER
+   ========================================================================== */
+.services-seo-header {
+  background-color: #fff;
+  padding: 3rem 0;
+  text-align: center;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.services-main-heading {
+  font-size: 2.2rem;
+  color: #002f34;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.services-main-heading .brand-name {
+  color: #004d40;
+}
+
+.services-subtitle {
+  font-size: 1.15rem;
+  color: #5a6a72;
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+}
+
+.services-subtitle strong {
+  color: #004d40;
+  font-weight: 600;
+}
+
+.services-highlights {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #f8f9fa;
+  border-radius: 50px;
+  border: 1px solid #e9ecef;
+}
+
+.highlight-icon {
+  font-size: 1.2rem;
+}
+
+.highlight-text {
+  font-size: 0.95rem;
+  color: #5a6a72;
   font-weight: 500;
 }
 
-/* --- Services Hero Section --- */
-.services-hero {
+/* ==========================================================================
+   4. SERVICE AREAS SECTION
+   ========================================================================== */
+.service-areas-section {
   background-color: #004d40;
-  padding: 4rem 0;
-  text-align: center;
-  color: #fff;
-  /* Optional: Add a background image */
-  /* background-image: linear-gradient(rgba(0, 77, 64, 0.9), rgba(0, 77, 64, 0.9)), url('/path/to/your/hero-image.jpg'); */
-  background-size: cover;
-  background-position: center;
-}
-
-.services-hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  font-weight: 700;
+  padding: 3rem 0;
   color: #fff;
 }
 
-.services-hero p {
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 1.1rem;
-  line-height: 1.6;
+.service-areas-section .section-heading {
+  color: #fff;
+  margin-bottom: 1rem;
 }
 
-/* --- Services Introduction Section --- */
-.services-intro {
-  background-color: #fff;
-  padding: 4rem 0;
-  text-align: center;
+.service-areas-section .section-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
 }
 
-.services-intro h2 {
-  font-size: 2rem;
-  color: #002f34;
-  margin-bottom: 1.5rem;
-  position: relative;
-  padding-bottom: 1rem;
-}
-
-.services-intro h2::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 3px;
-  background-color: #ffc107;
-}
-
-.services-intro p {
-  max-width: 800px;
-  margin: 0 auto;
-  color: #5a6a72;
-  line-height: 1.7;
-  font-size: 1.05rem;
-}
-
-/* --- Services List Section --- */
-.services-list {
-  padding: 4rem 0;
-}
-
-/* Style for the "Inquire" link on each service card */
-.service-cta {
-  display: inline-block;
-  margin-top: auto;
-  color: #004d40;
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.service-cta:hover {
-  color: #00362d;
-  transform: translateX(5px);
-}
-
-/* --- Service Process Section --- */
-.service-process {
-  background-color: #fff;
-  padding: 4rem 0;
-}
-
-.service-process h2 {
-  text-align: center;
-  font-size: 2rem;
-  color: #002f34;
-  margin-bottom: 3rem;
-  position: relative;
-  padding-bottom: 1rem;
-}
-
-.service-process h2::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 3px;
-  background-color: #ffc107;
-}
-
-.process-steps {
+.areas-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
@@ -168,14 +154,343 @@
   margin: 0 auto;
 }
 
-.step {
+.area-group {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+}
+
+.area-group h3 {
+  color: #ffc107;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.area-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.area-group li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+}
+
+.area-group li:last-child {
+  border-bottom: none;
+}
+
+/* ==========================================================================
+   5. SERVICES INTRODUCTION
+   ========================================================================== */
+.services-intro {
+  background-color: #fff;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 2rem;
+  color: #002f34;
+  margin-bottom: 1rem;
+  position: relative;
+  font-weight: 700;
+}
+
+.section-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #ffc107;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #6c757d;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.intro-text {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  color: #5a6a72;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.intro-text strong {
+  color: #004d40;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.stat-item {
   text-align: center;
   padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #004d40;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   6. SERVICES LIST SECTION
+   ========================================================================== */
+.services-list {
+  padding: 4rem 0;
+  background-color: #f9f9f9;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 47, 52, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e9ecef;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #004d40;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 77, 64, 0.15);
+}
+
+.service-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
   transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.service-card h3 {
+  color: #002f34;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.service-card p {
+  color: #5a6a72;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.service-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.service-highlights li {
+  padding: 0.5rem 0;
+  color: #5a6a72;
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.service-highlights li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #004d40;
+  font-weight: bold;
+}
+
+.service-meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.meta-icon {
+  font-size: 1rem;
+}
+
+.service-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  background-color: #004d40;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  border: 2px solid #004d40;
+  margin-top: auto;
+}
+
+.service-cta:hover {
+  background-color: #00362d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 77, 64, 0.2);
+}
+
+.cta-arrow {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.service-cta:hover .cta-arrow {
+  transform: translateX(3px);
+}
+
+/* ==========================================================================
+   7. SERVICE CATEGORIES
+   ========================================================================== */
+.service-categories {
+  background-color: #fff;
+  padding: 4rem 0;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 3rem auto 0;
+}
+
+.category-card {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 10px;
+  border-left: 4px solid #004d40;
+}
+
+.category-card h3 {
+  color: #004d40;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.category-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-card li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e9ecef;
+  color: #5a6a72;
+  font-size: 0.95rem;
+}
+
+.category-card li:last-child {
+  border-bottom: none;
+}
+
+/* ==========================================================================
+   8. SERVICE PROCESS SECTION
+   ========================================================================== */
+.service-process {
+  background-color: #f9f9f9;
+  padding: 4rem 0;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 3rem auto 0;
+}
+
+.step {
+  text-align: center;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 47, 52, 0.05);
+  transition: transform 0.3s ease;
+  border: 1px solid #e9ecef;
+  position: relative;
 }
 
 .step:hover {
   transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 77, 64, 0.1);
 }
 
 .step-number {
@@ -190,31 +505,96 @@
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0 auto 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.step-number::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 50%;
+  border: 2px solid #ffc107;
+  z-index: 0;
 }
 
 .step h3 {
   color: #002f34;
   margin-bottom: 1rem;
   font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .step p {
   color: #5a6a72;
   line-height: 1.6;
+  font-size: 0.95rem;
 }
 
-/* --- Call to Action Section --- */
+/* ==========================================================================
+   9. FAQ SECTION
+   ========================================================================== */
+.services-faq {
+  background-color: #fff;
+  padding: 4rem 0;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 3rem auto 0;
+}
+
+.faq-item {
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #ffc107;
+}
+
+.faq-item h3 {
+  color: #002f34;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.faq-item p {
+  color: #5a6a72;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* ==========================================================================
+   10. CALL TO ACTION SECTION
+   ========================================================================== */
 .cta-section {
   background-color: #004d40;
   padding: 4rem 0;
   text-align: center;
   color: #fff;
+  position: relative;
 }
 
-.cta-section h2 {
-  font-size: 2rem;
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #ffc107;
+}
+
+.cta-section .section-heading {
+  color: #fff;
   margin-bottom: 1rem;
-  font-weight: 700;
 }
 
 .cta-section p {
@@ -222,19 +602,106 @@
   margin: 0 auto 2rem;
   font-size: 1.1rem;
   line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
 }
 
-.cta-section .cta-button {
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  font-size: 1rem;
+}
+
+.cta-button.primary {
   background-color: #ffc107;
   color: #002f34;
 }
 
-.cta-section .cta-button:hover {
+.cta-button.primary:hover {
   background-color: #e0a800;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
+}
+
+.cta-button.secondary {
+  background-color: transparent;
+  color: #fff;
+  border-color: #ffc107;
+}
+
+.cta-button.secondary:hover {
+  background-color: #ffc107;
   color: #002f34;
 }
 
-/* --- Accessibility --- */
+.cta-note {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  margin-top: 1.5rem;
+}
+
+.cta-note strong {
+  color: #fff;
+}
+
+.cta-note a {
+  color: #ffc107;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.cta-note a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   11. SEO FOOTER
+   ========================================================================== */
+.services-seo-footer {
+  background-color: #002f34;
+  color: #fff;
+  padding: 2rem 0;
+  margin-top: 4rem;
+  display: none;
+}
+
+.seo-footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.seo-keyword-list {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  opacity: 0.9;
+  margin: 0;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border-left: 4px solid #ffc107;
+}
+
+.seo-keyword-list strong {
+  color: #ffc107;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   12. ACCESSIBILITY
+   ========================================================================== */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -247,41 +714,110 @@
   border: 0;
 }
 
-/* --- Page-Level Responsive Adjustments --- */
-@media (max-width: 768px) {
-  .services-hero {
-    padding: 3rem 0;
-  }
-  
-  .services-hero h1 {
-    font-size: 2rem;
-  }
-  
-  .services-intro,
-  .services-list,
-  .service-process {
-    padding: 3rem 0;
-  }
-  
-  .services-intro h2,
-  .service-process h2,
-  .cta-section h2 {
+/* ==========================================================================
+   13. RESPONSIVE DESIGN
+   ========================================================================== */
+
+/* Tablet Styles */
+@media (max-width: 992px) {
+  .services-main-heading {
     font-size: 1.8rem;
+  }
+  
+  .section-heading {
+    font-size: 1.8rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .areas-grid,
+  .categories-grid,
+  .faq-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .services-main-heading {
+    font-size: 1.6rem;
+  }
+  
+  .section-heading {
+    font-size: 1.6rem;
+  }
+  
+  .services-subtitle,
+  .section-subtitle {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .services-highlights {
+    gap: 1rem;
+  }
+  
+  .highlight-item {
+    padding: 0.5rem 1rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .service-card {
+    padding: 1.5rem;
+  }
+  
+  .areas-grid,
+  .categories-grid,
+  .faq-grid {
+    grid-template-columns: 1fr;
   }
   
   .process-steps {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .cta-button {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 576px) {
-  .services-hero h1 {
-    font-size: 1.8rem;
+  .services-main-heading {
+    font-size: 1.4rem;
   }
   
-  .services-intro h2,
-  .service-process h2,
-  .cta-section h2 {
+  .section-heading {
+    font-size: 1.4rem;
+  }
+  
+  .service-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .cta-section .section-heading {
     font-size: 1.6rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
   }
 }
