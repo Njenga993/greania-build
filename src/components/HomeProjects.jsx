@@ -10,7 +10,7 @@ function HomeProjects() {
     <section className="home-projects">
       <div className="projects-header">
         <span className="section-subtitle">Our Portfolio</span>
-        <h2 className="section-title">Recent Projects That Define Our Excellence</h2>
+        <h2 className="section-title"> Recent Projects That Define Our Excellence</h2>
         <div className="divider"></div>
         <p className="section-description">
           From large commercial developments to community-focused initiatives, each project reflects our commitment to quality, sustainability, and client satisfaction.
