@@ -115,7 +115,7 @@ function Navbar() {
         <div className="container">
           <div className="nav-container">
             {/* Logo */}
-            <Link to="/greania-build/" className="logo" onClick={closeMenu}>
+            <Link to="/" className="logo" onClick={closeMenu}>
               <img 
                 src={logo} 
                 alt="Greania Build - Construction Company Kenya" 
@@ -128,7 +128,7 @@ function Navbar() {
               <ul className="nav-list">
                 <li>
                   <Link 
-                    to="/greania-build/" 
+                    to="/" 
                     className={`nav-link ${isActive('/') ? 'active' : ''}`}
                     onClick={closeMenu}
                   >
